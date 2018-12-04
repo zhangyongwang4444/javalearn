@@ -32,7 +32,7 @@ public class Human {
         this.name = name;
     }
 
-    public String getname() {
+    public String getName() {
         return this.name;
     }
 
@@ -40,7 +40,7 @@ public class Human {
         this.weight = weight;
     }
 
-    public int getweight() {
+    public int getWeight() {
         return this.weight;
     }
 
@@ -50,12 +50,11 @@ public class Human {
         return weight;
     }
 
-    
-
     public static int getNumber() {
         return number;
     }
 
+    // 只读，因为没有setter方法
     public int getNumber(int test) {
         return 0;
     }

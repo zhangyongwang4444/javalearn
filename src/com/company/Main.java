@@ -3,25 +3,24 @@ package com.company;
 public class Main {
     public static void main(String[] args) {
         Human def = new Human();
-        System.out.print(def.name);
-        System.out.print(def.weight);
+        System.out.print(def.getName());
+        System.out.print(def.getWeight());
 
-        System.out.println(Human.number);
-
+        System.out.println(Human.getNumber());
         System.out.println(Human.getNumber());
 
         Human jeff = new Human("jeff", 120);
-        System.out.print(jeff.name);
-        System.out.print(jeff.weight);
+        System.out.print(jeff.getName());
+        System.out.print(jeff.getWeight());
 
         Human jimmy = Human.newHuman("jimmy", 150);
-        jeff.rename("David");
+        jeff.setName("David");
         Human david = jeff; // jeff -> Human("David",120) , david -> Human("David",120)
 
         int newWeight = david.workout(); // int newWeight = jeff.workout()
 
-        System.out.println(david.weight);
-        System.out.println(jeff.weight);
+        System.out.println(david.getName());
+        System.out.println(jeff.getWeight());
 
         // i++ == i = i + 1 == i+=1
         // ++i
@@ -37,6 +36,6 @@ public class Main {
             jeff.workout();
             i += 1;
         }
-        System.out.println(jeff.weight);
+        System.out.println(jeff.getWeight());
     }
 }
