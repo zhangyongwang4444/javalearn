@@ -23,24 +23,34 @@ public class Human {
         Human.number += 1;
     }
 
-    //静态方法里构造对象
+    // 静态方法里构造对象
     public static Human newHuman(String name, int weight) {
         return new Human(name, weight);
     }
 
-
-    //改名字
-    public void rename(String newName) {
-        this.name = newName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    //锻炼减肥
+    public String getname() {
+        return this.name;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public int getweight() {
+        return this.weight;
+    }
+
+    // 锻炼减肥
     public int workout() {
         weight = weight - 5;
         return weight;
     }
 
-
+    
 
     public static int getNumber() {
         return number;
