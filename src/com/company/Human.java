@@ -2,8 +2,10 @@ package com.company;
 
 public class Human {
     private static int number = 0;
+
     // 成员变量
-    private String name;
+    // final 成员变量必须直接在声名的时候就初始化，或者在构造函数里面初始化！！！
+    private final String name;
     private int weight;
 
     // 目的是初始化对象
@@ -26,10 +28,6 @@ public class Human {
     // 静态方法里构造对象
     public static Human newHuman(String name, int weight) {
         return new Human(name, weight);
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getName() {

@@ -14,7 +14,6 @@ public class Main {
         System.out.print(jeff.getWeight());
 
         Human jimmy = Human.newHuman("jimmy", 150);
-        jeff.setName("David");
         Human david = jeff; // jeff -> Human("David",120) , david -> Human("David",120)
 
         int newWeight = david.workout(); // int newWeight = jeff.workout()
@@ -36,6 +35,10 @@ public class Main {
             jeff.workout();
             i += 1;
         }
+        final Human alex = new Human("alex", 100);
+        alex.setWeight(120);
+        System.out.println(alex.getWeight()); // 120
+
         System.out.println(jeff.getWeight());
     }
 }
